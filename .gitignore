@@ -2,6 +2,7 @@
 node_modules/
 docs/.vitepress/dist/
 docs/.vitepress/cache/
+docs/.vitepress/.temp/
 
 # 本地工具与进度文件（不推到公开仓库）
 _tools/
