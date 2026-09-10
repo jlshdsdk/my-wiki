@@ -43,6 +43,10 @@ title: 踩坑记录
 - **怎么解决**：给卡加权限：`gh auth refresh -s workflow`，它会给你一个一次性代码，去浏览器 `github.com/login/device` 输入并授权即可（浏览器里已登录 GitHub 的话就是点两下）。
 - **学到什么**：token = 门禁卡，scope = 卡上刻的门。权限报错先看「卡上刻了什么」，而不是急着重新登录。
 
+::: warning 状态备注（2026-09-11 凌晨）
+本次授权**还没完成**——导师生成了授权码，但输码需要学员本人在浏览器点两下，只能等醒来操作。所以目前 `.github/workflows/deploy.yml` 还躺在本地没进仓库，网站先用「gh-pages 分支」方式手动部署（这个方式不需要 workflow 权限）。授权完成后即可切回全自动的 Actions 部署。
+:::
+
 ## #005 国内网络装依赖慢/失败 → 用镜像
 
 - **现象**：`npm install` / `pip install` 龟速甚至超时断开。

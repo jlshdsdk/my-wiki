@@ -15,6 +15,10 @@ export default defineConfig({
   // 等内容稳定后可改回 false，让构建帮我们抓死链。
   ignoreDeadLinks: true,
 
+  // 在每页底部显示「最后一次更新时间」（数据来自 git 提交历史，
+  // 所以部署工作流里用了 fetch-depth: 0 拉全量历史）
+  lastUpdated: true,
+
   themeConfig: {
     nav: [
       { text: '首页', link: '/' },

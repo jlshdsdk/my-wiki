@@ -64,7 +64,14 @@ https://open.bigmodel.cn/api/paas/v4/
 
 ## 动手试一试
 
-先装好 `requests`（下下课细讲，这里照抄即可），然后新建 `test_api.py`：
+先执行下面这条命令，把 `requests` 工具包装好（它是做什么的、为什么这么写，下一课 06 细讲）：
+
+```
+py -m pip install requests
+rem 用 Python 自带的 pip 装 requests 这个第三方包
+```
+
+然后新建 `test_api.py`：
 
 ```python
 import requests  # 引入发请求的工具包

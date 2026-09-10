@@ -73,15 +73,13 @@ rem 按采购清单（package.json）下载所有依赖
 
 ## 自测两题
 
-::: details 第 1 题：你以后主要写 Python，为什么搭 Wiki 还要先装 Node.js？
-:::
+**第 1 题**：你以后主要写 Python，为什么搭 Wiki 还要先装 Node.js？
 
 ::: details 看答案
 因为建站工具 VitePress 是用 JavaScript 写的，它需要在 Node.js 这个「舞台」上才能运行；而下载安装 VitePress 用的 npm，也是随 Node.js 一起装上的。Python 是你以后写大模型应用用的，两者不冲突。
 :::
 
-::: details 第 2 题：`npm install` 慢得像蜗牛，加什么参数能提速？为什么有效？
-:::
+**第 2 题**：`npm install` 慢得像蜗牛，加什么参数能提速？为什么有效？
 
 ::: details 看答案
 加 `--registry=https://registry.npmmirror.com/`。npm 主仓库在国外，直连很慢；这个参数让 npm 从国内的**镜像**（npmmirror 分仓）取货——分仓的货和主仓一致，但物理上离你近，所以快得多。

@@ -60,7 +60,7 @@ git log
 rem 翻相册：列出所有历史快照，能看到刚才那条注释
 ```
 
-走完这五步（init → add → commit → log），你就完成了一次标准的 Git 工作流。日常写 Wiki 就是这个循环的重复：改文件 → add → commit → push。
+走完这四步（init → add → commit → log），你就完成了一次标准的 Git 工作流。日常写 Wiki 就是这个循环的重复：改文件 → add → commit → push。
 
 练完了删掉练手文件夹即可（`cd ..` 后 `rd /s test-repo`，`/s` 表示连里面的文件一起删）。
 
@@ -87,15 +87,13 @@ fatal: not a git repository
 
 ## 自测两题
 
-::: details 第 1 题：Git 和 GitHub 是一回事吗？各用一句话说明。
-:::
+**第 1 题**：Git 和 GitHub 是一回事吗？各用一句话说明。
 
 ::: details 看答案
 不是。Git 是装在电脑上的版本控制工具，负责给项目拍快照、回滚（相机）；GitHub 是存快照的云端网站，负责备份和分享（云端相册）。Git 离了 GitHub 也能用，GitHub 离了 Git 就没意义。
 :::
 
-::: details 第 2 题：add、commit、push 分别对应相册流程里的哪一步？为什么 commit 前要先 add？
-:::
+**第 2 题**：add、commit、push 分别对应相册流程里的哪一步？为什么 commit 前要先 add？
 
 ::: details 看答案
 add = 选出这次要拍的照片（暂存）；commit = 把照片贴成一页并写注释（提交快照）；push = 相册同步上云（推送到 GitHub）。commit 前先 add，是因为你可能同时改了五个文件，但只想让其中两个进这一页快照——add 就是那道「挑选」的闸门。
@@ -103,4 +101,4 @@ add = 选出这次要拍的照片（暂存）；commit = 把照片贴成一页�
 
 ## 下一课
 
-前置知识到此补齐。接下来进入正题：用 Node.js 和 VitePress 把你的 Wiki 站点真正搭起来。
+[04 · Markdown](./04-markdown.md)——学会这座 Wiki 里每一页用的写作格式，学完你就能开始往站里写自己的笔记了。
