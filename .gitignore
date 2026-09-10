@@ -1,0 +1,14 @@
+# 依赖与构建产物
+node_modules/
+docs/.vitepress/dist/
+docs/.vitepress/cache/
+
+# 本地工具与进度文件（不推到公开仓库）
+_tools/
+PLAN.md
+PROGRESS.md
+_tmp_*
+
+# 系统杂项
+Thumbs.db
+Desktop.ini
