@@ -58,6 +58,14 @@ title: 踩坑记录
   - Node.js 安装包：`https://registry.npmmirror.com/-/binary/node/`
 - **学到什么**：下载慢先想「哪里有分店」，别傻等。详见[前置知识 02](/prereq/02-node-and-npm) 与 [06](/prereq/06-python-env)。
 
+## #007 Node v22.0.0 的 V8 崩溃 bug
+
+- **现象**：`vitepress build` 启动约 0.6 秒即崩：`FATAL ERROR: NewSpace::EnsureCurrentCapacity Allocation failed - JavaScript heap out of memory`（堆才用了几 MB 就"溢出"，明显不正常）。
+- **当时在干什么**：开启 `lastUpdated: true` 后重新构建站点。之前同一版本构建成功过，纯属没踩到触发路径。
+- **原因（大白话）**：Node.js v22.0.0 这个「大版本第一版」自带一个 V8 引擎的回归 bug，特定 GC 路径必崩，22.1.0 就修了。教训：**装运行时永远别装 x.0.0**，等至少一两个补丁版。
+- **怎么解决**：升级便携 Node 到 v22.14.0（`_tools\upgrade-node.ps1` 一键换新）。
+- **学到什么**：遇到「不可能这么快就堆溢出」的崩溃，先查运行时版本的已知 bug，别急着怀疑自己代码。
+
 ## #006（预防篇）部署后整站白屏/样式全丢
 
 - **现象**：本地预览一切正常，部署到 GitHub Pages 后打开是白屏，浏览器控制台一堆 404。
